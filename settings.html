@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro - Setting</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <main>
+    <h3>Setting</h3>
+
+    <div>
+      <label for="minutes-input">타이머 시간(분)</label>
+      <input type="number" id="minutes-input" name="minutes" min="1" max="60" value="25">
+      <button type="button" id="save-btn">저장</button>
+    </div>
+
+    <a href="index.html" id="back-btn">메인으로 돌아가기</a>
+  </main>
+  <script src="settings.js"></script>
+</body>
+</html>
