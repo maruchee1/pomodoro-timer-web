@@ -61,6 +61,15 @@ body {
   color: var(--color-primary);
 }
 
+/* 현재 시간 */
+.clock {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+  margin-top: -24px; /* 헤더와의 간격을 줄여 헤더에 붙어 보이게 */
+}
+
 /* 타이머 */
 .timer {
   text-align: center;

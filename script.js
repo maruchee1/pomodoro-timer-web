@@ -21,6 +21,7 @@ const timeDisplay = document.getElementById("time-display");
 const startBtn = document.getElementById("start-btn");
 const stopBtn = document.getElementById("stop-btn");
 const resetBtn = document.getElementById("reset-btn");
+const clockDisplay = document.getElementById("clock");
 
 // ===== 화면 갱신 =====
 function formatTime(seconds) {
@@ -79,5 +80,16 @@ window.onstorage = function (event) {
   if (event.key === STORAGE_KEY) applySettings();
 };
 
+// ===== 현재 시간 표시 =====
+function renderClock() {
+  const now = new Date();
+  const hh = String(now.getHours()).padStart(2, "0");
+  const mm = String(now.getMinutes()).padStart(2, "0");
+  const ss = String(now.getSeconds()).padStart(2, "0");
+  clockDisplay.textContent = `${hh}:${mm}:${ss}`;
+}
+
 // 초기 화면 표시
 render();
+renderClock();
+setInterval(renderClock, 1000); // 1초마다 현재 시간 갱신
